@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <body>
+        <div>
+            <H2>Days between</H2>
+            <form action="/" method="POST">
+                <label>Date 1:</label>
+                <input type="text" name="date1" placeholder="YY-MM-DD" required><br>
+                <label>Date 2:</label>
+                <input type="text" name="date2" placeholder="YY-MM-DD" required><br>
+                <button type="submit" value="submit">Count</button>
+            </form>
+            {% if count %}
+            <p>There's {{count}} between these dates</p>
+            {% endif %}
+        </div>
+    
+    </body>
+
+</html>
